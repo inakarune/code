@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    .odd {
+      border:1px solid pink;
+    }
+    .even {
+      border:1px solid green;
+    }
+
+    </style>
+  </head>
+  <body>
+ <p id="lyrics">
+   ddd
+ </p>
+ <div id="target">
+   ccc
+ </div>
+
+
+    <script>
+    /*
+    var n = 100, song = '<ul class=lyrics>';
+
+    while (n >= 0){
+      if (n !== 0){
+        song = song + '<li>' + n + " bottle" + (n === 1 ? '' : 's') + " of beer on the wall! chug, chug, chug</li>"
+      } else {
+        song += "<li>no bottles of beer! stumble, stumble, stumble...</li>"
+      }
+      n--
+    }
+
+    song += "</ul>"
+
+    document.querySelector('#lyrics').innerHTML = song;
+
+
+    */
+/*
+var n = 38;
+var i = 0; // 처음 시작하는 초기화 숫자
+var text = '';
+
+*/
+/* 5번 문제
+while(counter <= n){
+  text = text + '<p>' + counter + '</p>' + '<hr>';
+  counter++
+  if (counter === n){
+
+  }
+}
+
+*/
+
+var n = 10;
+var str = '';
+var i = 1;
+
+while(i <= n){
+  if (i % 2 === 1){
+      str = str + '<p class="odd">' + i + '</p>' + '<hr>';
+  } else {
+    str = str + '<p class="even">' + i + '</p> ' + '<hr>';
+  }
+
+  i++;
+
+  }
+document.querySelector('#target').innerHTML = str;
+
+    </script>
+  </body>
+</html>

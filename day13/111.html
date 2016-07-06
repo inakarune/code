@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <div id="array">
+  </div>
+  <div id="array2"></div>
+  <div id="bucket_output">
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script type="text/javascript">
+
+    var recipe = ['떡볶이', '냉면', '돼지갈비', '젤라또', '스파게티'];
+/*
+    console.log(recipe[0])*/
+    var last_step = 4;
+/*
+    console.log(recipe[last_step]);
+*/
+    var bucket_list = ['스카이다이빙', '세계일주'];
+
+    bucket_list.push('복권 당첨');
+    bucket_list.push('한라산 등반');
+    bucket_list.unshift('자유형 배우기');
+    bucket_list.unshift('소설');
+
+    var dying_wish = bucket_list.pop();
+    var do_it_now = bucket_list.shift();
+/*
+    var i = 0;
+    while (i < recipe.length){
+      $('div#array').append(recipe[i]);
+      i++
+    }
+
+    var i = 0;
+    while (i < bucket_list.length){
+      $('div#array2').append(bucket_list[i]);
+      i++
+    }
+
+    var append_string = function (array){
+      var i = 0
+      while (i < array.length){
+        console.log(array[i]);
+        i++
+      }
+    }
+
+    append_string(recipe);
+    append_string(bucket_list);
+*/
+/*
+    var append_string = function (array1, selector){
+      var i = 0;
+      while (i < array1.length){
+        $(selector).append(array1[i]);
+        i++
+      }
+    }
+
+    append_string(recipe, '#bucket_output');
+    */
+    var scrabled_poem = 'roses red are bacon crispy i bacon love and is blue violets are');
+    var arr1 = scrabled_poem.split(' ');
+    var unscrambled_array
+        arr1.pop();
+        arr1.shift();
+        arr1.pop();
+        arr1.shift();
+        arr1.pop();
+        scrabled_poem.shift();
+        scrabled_poem.pop();
+        scrabled_poem.shift();
+        scrabled_poem.pop();
+        scrabled_poem.shift();
+
+
+        console.log(arr1.length);
+    </script>
+  </body>
+</html>

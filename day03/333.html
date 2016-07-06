@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <title>여기저기 박스가 널려썽요!</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .wrap {
+              margin: 0 auto;
+              width:960px;
+              }
+      .section1 { margin:20px 0px;
+                  padding: 0px;
+                  border:5px solid green; }
+      .section2 { margin:20px 0px;
+                  padding: 10px 10px 10px 10px;
+                  border:5px solid green;}
+      .section3 { margin:20px 0px;
+                  padding: 10px 10px 10px 10px;
+                  border:5px solid green;}
+      #box1 {
+
+              background-color: red;
+              width:300px;
+              height:50px;
+              border:2px solid black;
+              border-radius: 30px;
+              padding: 10px 10px 10px 10px;
+               }
+      .box2 {
+
+              background-color: orange;
+              width:300px;
+              height:50px;
+              border:2px solid black;
+              padding: 10px 10px 10px 10px;
+              }
+      div {
+
+            background-color: yellow;
+            width:300px;
+
+            border:2px solid black;
+            border-left:10px solid red;
+            padding: 10px 10px 10px 10px;
+          }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+      <div class="section1">
+        <div id="box1">쇠로 된 박스</div>
+      </div>
+      <div class="section2">
+        <div class="box2">종이 박스</div>
+      </div>
+      <div class="section3">
+        <div>감정이 있는 박스</div>
+      </div>
+      
+    </div>
+
+</body>
+</html>

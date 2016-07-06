@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+
+  <form action="form-responses/new" method="POST"><!-- -->
+      <input type="text" name="firstname" value="아무거나 입력해주세요." size="30" autofocus><br>
+      <input type="password" name="pswd"><br>
+      <input type="email" name="userEmail" size="50" placeholder="이메일을 입력해주세요. ex. inakarune@naver.com"><br>
+
+<!-- radio button의 경우 이름이 같으면 갯수에 상관없이 하나만 고를 수 있다. -->
+      <input type="radio" name="weird" value="code-blue" checked>
+      <label for="choice">골라보시오</label><br>
+      <input type="radio" name="weird" value="code-red" checked>
+      <label for="choice1">싫으면 이걸 골라보든지.</label><br>
+
+
+      취미를 선택해주세요. (다중선택 가능)<br>
+      <input type="checkbox" name="book" id="book" value="book">
+        <label for="book">독서</label><br>
+      <input type="checkbox" name="cook" value="cook">
+        <label for="book">요리</label><br>
+      <input type="checkbox" name="fish" value="fish">
+        <label for="book">낚시</label><br>
+      <input type="checkbox" name="game" value="game">
+        <label for="book">게임</label><br>
+      <input type="checkbox" name="music" value="music">
+        <label for="book">음악</label><br>
+      <br>
+      동의하면 체크해주세요.<br>
+      <input type="checkbox" name="optin" value="trusting"><br>
+
+
+
+
+
+      좋아하는 자동차를 골라보자.
+      <select name="car">
+          <optgroup label="스위스 자동차">
+              <option value="volvo">Volvo</option>
+              <option value="honda">Honda</option>
+          </optgroup>
+          <optgroup label="독일 자동차">
+              <option value="bmw">BMW</option>
+              <option value="audi">Audi</option>
+          </optgroup>
+      </select>
+
+      <br><br>
+
+      <textarea name="user_message" rows="8" cols="40">
+      </textarea>
+
+      <input type="submit">
+
+    </form>
+
+
+
+
+
+  </form>
+
+</body>
+</html>

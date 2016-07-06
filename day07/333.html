@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+</body>
+<script>
+
+var hero, bad_guy;
+
+if (hero === 'strong'){
+  if (bad_guy === 'weak'){
+    console.log('적이 약하군, 아주 쉬운 싸움이겠어.');
+  }
+  console.log('만만한 상대가 아니군, 끝까지 싸워보자!');
+}
+
+var response, image_path,
+    secret_saying = document.querySelector('#message').textContent;
+
+if (secret_saying === '독수리는 자정에 날라갑니다.'){
+  response = '통과하세요';
+  image_path = 'images/open_door.png';
+} else {
+  response = '적이다, 공격하라';
+  image_path = 'images/attack.png';
+}
+
+document.querySelector('#result').textContent = response;
+document.querySelector('img').src = image_path;
+
+var user_input = document.querySelector('input#search').value,
+    output_el = document.querySelector('#output');
+
+    if (user_input !== 'happiness'){
+      if (!user_input){
+        document.querySelector('input').value = 'hey you, type here z';
+      } else {
+        output_el.textContent = 'youre searching for the wrong thing!';
+      }
+    } else {
+      output_el.textContent = 'ahh, the enlightened one!';
+    }
+
+
+    if (user_input === 'happiness'){
+      output_el.textContent = 'ahh, the enlightened one!';
+    } else if (!user_input){
+      document.querySelector('input').value = 'hey youm, type here :z';
+    } else {
+      output_el.textContent = 'youre searching for the wrong thing.';
+    }
+
+
+    if (age < 21){
+      output_el.textContent = 'sorry, son';
+    } else if (!(age < 35)){
+      output_el.textContent = 'id please';
+    } else if (name === 'bob'){
+      output_el.textContent = 'youre banned, bob!';
+    } else {
+      output_el.textContent = 'come on in!';
+    }
+
+
+</script>
+
+</html>

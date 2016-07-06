@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>회원가입 사이트 만들어주세요.</title>
+  <style>
+    h4 { color:violet; }
+    input { background-color: orange; }
+    input.submit:hover { background-color: pink; }
+
+  </style>
+</head>
+<body>
+
+<form action="http://52.78.21.63/send/inakarune@naver.com" method="POST">
+  <label for="name">이름</label><input type="text" name="name" value="이름을 입력해주세요"><br>
+  <label for="id">아이디</label><input type="text" name="id"><br>
+  <label for="password">비밀번호</label><input type="password" name="password"><br>
+  <label for="email">이메일</label><input type="email" name="email"><br><br>
+
+  <span>자기소개 해주세요.</span><br>
+  <textarea name="user_message" rows="8" cols="40"></textarea>
+
+  <h3>당신에 대하여 알아봅시다.(설문조사)</h3>
+
+  <h4>본인의 성향에 대해 알려주세요.</h4>
+  <input type="radio" name="point" value="inside"><label for="inside">외향적이다.</label>
+  <input type="radio" name="point" value="outside"><label for="outside">내향적이다.</label>
+  <input type="radio" name="point" value="notknow"><label for="notknow">잘 모르겠다.</label>
+
+  <br><br>
+  <h4>본인의 취미에 대해 알려주세요.</h4>
+  <input type="checkbox"><label for="read">독서</label>
+  <input type="checkbox"><label for="cook">요리</label>
+  <input type="checkbox"><label for="fish">낚시</label>
+
+  <br><br>
+  <h4>본인이 좋아하는 영화를 골라주세요.</h4>
+  <select name="movie">
+    <optgroup label="korean">
+      <option value="love">사랑</option>
+      <option value="envy">질투</option>
+    </optgroup>
+    <optgroup label="china">
+      <option value="yellow">노랑</option>
+      <option value="red">레드</option>
+
+    </optgroup>
+</select>
+  <br><br>
+  <input type="submit" class="submit">
+
+</form>
+</body>
+</html>

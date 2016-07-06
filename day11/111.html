@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+<p>
+</p>
+<div id="output">
+</div>
+
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script>
+/*
+var greeter = function (){
+  return 'Hello'
+}
+
+var greeting = greeter();
+
+console.log(greeting + ', nice to meet you.');
+console.log(greeter() + ', nice to meet you.');
+
+var passion = function (){
+  $('body').append('<div id="output">열정잇는 스트링입니다.</div>');
+
+}
+passion();
+console.log(passion);
+
+
+var saying_generator = function (){
+  var phrase = 'Heeey, ' + 'its the ' + ' Fonz.'
+  return phrase;
+}
+
+var saying = saying_generator();
+
+var broken_saying_generator = function (){
+  var phrase = 'Heeey, ' + 'its the ' + ' Fonz.';
+  phrase
+}
+
+var broken_saying_generator = broken_saying_generator();
+
+*/
+/*
+var get_sentence = function (random){
+  var text = 'text1';
+  var textt = 'text2';
+  var new_sentence = 1;
+
+  while (new_sentence <= 10){
+    var random = Math.random();
+    if (random <= 0.5){
+      $('p').append(text);
+    } else {
+      $('p').append(textt);
+    }
+    new_sentence++
+  }
+  return random;
+
+}
+
+get_sentence();
+*/
+/*
+var inspector = function (){
+  console.log(arguments);
+}
+
+inspector(3);
+inspector(3 + 7);
+inspector(3, 7);
+
+inspector('hello');
+inspector('hello' + ' ' + 'how are you');
+inspector('hello', 'how are you');
+
+inspector('hello', 7, true, undefined, null, 3 + 12, 'nice to' + ' meet you');
+
+*/
+/*
+var log_and_return = function (){
+  console.log(arguments);
+  return arguments;
+}
+
+var returned_values = log_and_return();
+
+log_and_return(returned_values);
+
+var value_logger = function (value){
+  console.log(value);
+}
+
+value_logger('Howdy ho, neighborino!');
+
+value_logger(3 + 7);
+value_logger(3, 7);
+
+var doubler = function (num){
+  return num * 2;
+}
+
+var should_be_ten = doubler(5);
+
+var double_value_logger = function (value1, value2){
+  console.log(value1, value2);
+}
+
+double_value_logger('hello', 'how are you');
+
+double_value_logger('hello');
+
+var add = function (num1, num2){
+  return num1 + num2;
+}
+
+var sum = add(7, 12);
+*/
+
+var tripler = function (num1){
+  return num1 * 3;
+}
+
+var multi = function (num1, num2){
+  return num1 * num2;
+}
+
+var divide = function (num1, num2){
+  return num1 / num2;
+}
+
+var remainder = function (num1, num2){
+  return num1 % num2;
+}
+
+var a1 = tripler(5);
+var a2 = multi(a1, 12);
+var a3 = divide(a2, 2);
+var a4 = remainder(a3, 3);
+
+console.log(a4);
+
+
+var full_expression = function (){
+
+}
+
+
+var string_printer = function (arguments){
+  $('#output').text('이것은 함수를 이용하여 넣는 텍스트입니다.');
+}
+
+</script>
+</body>
+</html>

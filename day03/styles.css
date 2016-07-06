@@ -1,0 +1,6 @@
+
+h1 { color:pink;
+     font-size:30px; }
+p { font-size: 12px; }
+p a{ background-color: green; font-size: 30px; }
+p>a { background-color: violet; font-size: 40px; }

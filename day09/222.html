@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>theme changer</title>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
+    <div>
+    </div>
+    <h2></h2>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+
+    var ask = prompt('어떤 색의 테마 웹페이지가 보고 싶나요?(pink, green, blue)');
+
+
+    while (true){
+      if (ask === 'pink' || ask === 'green' || ask === 'blue'){
+        break;
+      } else {
+        ask = prompt('어떤 색의 테마 웹페이지가 보고 싶나요? (pink, green, blue)');
+      }
+
+    }
+
+    $('body').css('background-color', ask);
+    $('h1').css('color', 'light' + ask);
+    $('div').css('border', ask);
+    $('p').css('color', 'dark' + ask);
+    $('h2').text(ask + '테마가 적용되엇습니다.');
+
+    </script>
+  </body>
+</html>

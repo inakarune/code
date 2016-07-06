@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <p id="lyrics">
+      dddd
+    </p>
+
+
+    <script>
+    /*  var n = 0;
+
+      console.log("아래 while loop은 흔히들 카운터라고 합니다. 숫자를 세기 때문입니다.");
+
+      while (n < 10){
+        console.log(n, "ha-ha-ha");
+        n++
+      }
+
+      console.log('끝') */
+
+/*
+
+/*
+      var n = 0;
+      while (n < 50){
+        console.log(n)
+        n = n + 2;
+      } */
+
+      var n = 100, song = '';
+
+      while (n >= 0){
+        if(n !== 0) {
+          song = song + ' ' + n + " bottles of beer on the wall! chug, chug, chug"
+        } else {
+          song += " no bottles of beer! stumble, stumble, stumble..."
+        }
+        n--
+      }
+
+      document.querySelector('#lyrics').textContent = song;
+
+
+
+    </script>
+
+  </body>
+</html>

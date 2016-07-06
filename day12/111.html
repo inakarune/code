@@ -1,0 +1,152 @@
+<html>
+  <head>
+    <title>Event</title>
+    <style>
+      html {
+        cursor: none;
+      }
+      #target {
+        background-color: gray;
+        width: 200px;
+        height: 200px;
+       }
+      .highlighted {
+        background-color: yellow;
+        width: 200px;
+        height: 200px;
+      }
+      img {
+        position: fixed;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="target">
+      this is target div.
+      <!-- Show me the money!-->
+    </div>
+    <div class="highlighted">
+    </div>
+
+    <div id="magic">
+      <img id="magic_img" src="Margaret_Hamilton.gif">
+    </div>
+
+    <img id="puppy" src="puppy.gif">
+<!--
+    <div id="hide">
+ddddddddddddddddddd
+
+    </div>
+
+    <div id="opera">
+      show me the oprah
+    </div>
+
+    <div id="ooo">
+      show me the ooooo
+    </div>
+
+    <div id="item">
+      i'm item hehehe
+    </div>
+-->
+
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+    /*
+    var fn = function (){
+      console.log('heey');
+    }
+    fn();
+
+    document.querySelector('#target').addEventListener('click', fn);
+
+
+    document.querySelector('#target').addEventListener('click', function (){
+      console.log('same deal')
+    })
+
+    var beeper = function (){
+      $('#target').append('<button>button</button>');
+    }
+
+    beeper();
+
+    $('button').click(function (){
+      $('#target').append('<span>beep</span>');
+    })
+    */
+/*
+    $('div').on('click', function (){
+      console.log('A div has been clicked!')
+    })
+
+    $('#target').click(function (){
+      $('#hide').html('<img id="money" src="dollar.jpg">')
+      $('#money').click(function (){
+        $('#money').hide()
+      })
+    })
+
+    $('#opera').click(function (){
+      $('#opera').html('<img src="opera.jpg">')
+    })
+
+    $('#ooo').click(function (){
+      $('#ooo').html('<img src="ooo.jpg">')
+    })
+
+    var img1 = function (){
+
+    }
+    $('#item').click(function (){
+      $('#target').show().css('display', 'none')
+      $('#opera').show().css('display', 'none')
+      $('#ooo').show().css('display', 'none')
+    })
+
+    $('#target').on('mouseover', function (){
+      $('#target').addClass('highlighted')
+    })
+
+    $('#target').on('mouseover', function (){
+      $('#target').removeClass('highlighted')
+    })
+
+    $('#magic').on('mouseover', function (){
+      $('#magic_img').hide()
+    })
+
+    $('#magic').on('mouseleave', function (){
+      $('#magic_img').show()
+    })
+
+*/
+/* event.pageX와 event.pageY, !!event.which는 자바스크립트 내장 언어이며
+마우스의 좌표를 알려준다. 클릭 안할 때 마우스의 위치는 좌표와 false
+클릭한 상태에선 좌표와 true를 가리키며 !!evnet.which는 false와 true를 가른다.
+클릭하면 true, 아니면 false
+*/
+/*
+var mouse_tracker = function (event){
+  console.log(event.pageX, event.pageY, !!event.which)
+}
+$('body').on('mousemove', mouse_tracker)
+*/
+/*
+var puppy_move = function (event){
+  $('#puppy').css({
+    top: event.pageY + 'px',
+    left: event.pageX + 'px'
+  })
+}
+$('body').on('mousemove', puppy_move)
+*/
+
+
+
+    </script>
+  </body>
+</html>
