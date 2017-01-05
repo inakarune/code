@@ -1,0 +1,35 @@
+var products = [
+       { name: "Sonoma", ingredients: ["artichoke", "sundried tomatoes", "mushrooms"], containsNuts: false },
+       { name: "Pizza Primavera", ingredients: ["roma", "sundried tomatoes", "goats cheese", "rosemary"], containsNuts: false },
+       { name: "South Of The Border", ingredients: ["black beans", "jalapenos", "mushrooms"], containsNuts: false },
+       { name: "Blue Moon", ingredients: ["blue cheese", "garlic", "walnuts"], containsNuts: true },
+       { name: "Taste Of Athens", ingredients: ["spinach", "kalamata olives", "sesame seeds"], containsNuts: true }
+    ];
+
+
+
+
+var ingredientCount = { "{ingredient name}": 0 };
+
+    for (var i = 0; i < products.length; i+=1) {
+        for (var j = 0; j < products[i].ingredients.length; j+=1) {
+            ingredientCount[products[i].ingredients[j]] = (ingredientCount[products[i].ingredients[j]] || 0) + 1;
+        }
+    }
+
+
+node.js 런타임 환경 + 자바스크립트 라이브러리
+
+런타임 환경이란 자바스크립트가 구동될 수 잇는 환경
+
+자바스크립트 라이브러리란 이미 누군가 개발자들의 편의를 위해 만들어 놓은 개발자 코드 모음
+
+nodejs 사용 방법
+
+node에 들어간다.
+
+.editor enter 하면
+줄바꿈해도 계속 이어 쓸 수 잇다. 단, 방향키로 위로 올라갈 수 없다.
+
+나오려면 ctrl + c 2번 누른다.
+

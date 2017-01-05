@@ -1,0 +1,39 @@
+function을 장식하는 function을 디코레이터라고 한다. decorator
+
+
+this, apply, call
+
+function test(a, b){ return a + b }
+test(1, 2) /// 3
+test.apply(this, [1, 2]) // 3
+test.call(this, 1, 2) // 3
+test.bind(this, 1, 2)() // 3
+
+
+test function 안에 this 키워드가 없기 때문에 아무거나 넣어도 됨(this는 window를 가리킴)
+
+function test(a, b){ return this.a  + this.b }
+
+test.apply({a : 2, b : 3}) // 5
+test.apply({a : 2, b : 3}, []) // 5
+
+function 안에 this 키워드를 사용하면 apply의 첫번째 인자를 바라본다.
+
+
+function 안의 function this는 window를 가리킨다.
+arguments는 배열과 닮았기 때문에 apply를 사용할 수 잇다.
+arguments는 배열과 닮앗지만 Object이다.
+
+복잡한 연산을 이미 했는데 또 연산할 필요 없이 저장해두고 필요할 때 쓴다. _.once (단점. arguments를 무시한다)
+메모아이제이션이랑 비슷?
+
+메모아이제이션 : arguments에 따라 값을 저장한다.
+
+_.memoize = function(func){
+
+var obj = {};
+return function(){
+	if(obj[arguments] === undefined){
+obj[arguments] = func.apply(this, arguments)
+	}
+};

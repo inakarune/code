@@ -55,15 +55,13 @@ ddddddddddddddddddd
 
     <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
     <script>
-    /*
+
     var fn = function (){
       console.log('heey');
     }
     fn();
 
     document.querySelector('#target').addEventListener('click', fn);
-
-
     document.querySelector('#target').addEventListener('click', function (){
       console.log('same deal')
     })
@@ -77,8 +75,8 @@ ddddddddddddddddddd
     $('button').click(function (){
       $('#target').append('<span>beep</span>');
     })
-    */
-/*
+
+
     $('div').on('click', function (){
       console.log('A div has been clicked!')
     })
@@ -123,19 +121,19 @@ ddddddddddddddddddd
       $('#magic_img').show()
     })
 
-*/
+
 /* event.pageX와 event.pageY, !!event.which는 자바스크립트 내장 언어이며
 마우스의 좌표를 알려준다. 클릭 안할 때 마우스의 위치는 좌표와 false
 클릭한 상태에선 좌표와 true를 가리키며 !!evnet.which는 false와 true를 가른다.
 클릭하면 true, 아니면 false
 */
-/*
+
 var mouse_tracker = function (event){
   console.log(event.pageX, event.pageY, !!event.which)
 }
 $('body').on('mousemove', mouse_tracker)
-*/
-/*
+
+
 var puppy_move = function (event){
   $('#puppy').css({
     top: event.pageY + 'px',
@@ -143,7 +141,10 @@ var puppy_move = function (event){
   })
 }
 $('body').on('mousemove', puppy_move)
-*/
+
+$('button#go').on('click', function(){
+  $('#output').text($('input#color').val())
+})
 
 
 

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  <div id="secret"></div>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+      var secret_keeper = function (a , b){
+        var secret = 'it is so difficult.'
+        return $('#secret').append(a + secret + b);
+      }
+
+      secret_keeper('fun1', 'fun2');
+
+    </script>
+  </body>
+</html>

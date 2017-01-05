@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link src="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+  <body>
+  <div id="header">
+
+  </div>
+  <div id="nav">
+    <a id="book" href="e-commerce.html">Book</a>
+    <a id="album" href="e-album.html">Album</a>
+
+  </div>
+  <div id="content">
+
+    </div>
+
+  <div id="footer">
+    사업자등록번호 : 130-86-22258 전화번호 : 032-888-5455 팩스번호 : 032-888-5588<br>
+    미래디자인(주) 경기도 부천시 원미구 중2동 굿모닝위너스텔 9층 911호<br>
+    copyright(c) 미래디자인(주)
+  </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script type="text/javascript">
+      var book1 = {
+        id: 'harry-potter',
+        name: 'harry-potter',
+        category: 'book',
+        picture: '<img src="https://live3-attachment.namuwikiusercontent.com/uploadfile__jyu_n_3.jpg">',
+        price: 100,
+        selling_points: ['fantasy', 'wizard', 'boy', 'witch', 'magic']
+      }
+      var book2 = {
+        id: 'winter',
+        name: 'winter',
+        category: 'book',
+        picture: '<img src="http://taramcguire.com/wp-content/uploads/the-winter-palace.jpg">',
+        price : 50,
+        selling_points: ['love', 'friendship', 'snow']
+      }
+      var album1 = {
+        id: 'pink',
+        name: 'pink',
+        category: 'album',
+        picture: '<img src="http://www.contactmusic.com/images/content/pink-greatest-hits-so.jpg">',
+        price : 20,
+        selling_points: ['ballad', 'pop']
+      }
+      var album2 = {
+        id: 'hot',
+        name: 'hot',
+        category: 'album',
+        picture: '<img src="http://mblogthumb2.phinf.naver.net/20110906_217/wjshkgo_1315288312256X7X1t_JPEG/naver_com_20110906_121038.jpg?type=w2">',
+        price : 40,
+        selling_points: ['pop', 'rock', 'heavy metal']
+      }
+      $('#harry-potter .name').text(book1.name)
+      $('#winter .name').text(book2.name)
+      $('#pink .name').text(album1.name)
+      $('#hot .name').text(album2.name)
+/* 6번 문제
+      var add_to_page = function(obj){
+        $('#content').append('<div id=' + obj.id + '>' + obj.name + '</>');
+        $('#content').append('<div id=' + obj.id + '>' + obj.category + '</>');
+        $('#content').append('<div id=' + obj.id + '>' + obj.picture + '</>');
+        $('#content').append('<div id=' + obj.id + '>' + obj.price + '</>');
+        $('#content').append('<div id=' + obj.id + '>' + obj.selling_points + '</>');
+
+      }*/
+      // show, hide
+
+      $('a#book').on('click', function(obj){
+        if (obj.category === 'book'){
+          $('#content').append('<div id=' + obj.id + '>' + obj.name + '</>');
+          $('#content').append('<div id=' + obj.id + '>' + obj.category + '</>');
+          $('#content').append('<div id=' + obj.id + '>' + obj.picture + '</>');
+          $('#content').append('<div id=' + obj.id + '>' + obj.price + '</>');
+          $('#content').append('<div id=' + obj.id + '>' + obj.selling_points + '</>');
+        }
+      })
+      function(obj){
+          if (obj.category === 'book' ){
+
+
+          } else if (obj.category === 'album'){
+
+            $('#content').append('<div id=' + obj.id + '>' + obj.name + '</>');
+            $('#content').append('<div id=' + obj.id + '>' + obj.category + '</>');
+            $('#content').append('<div id=' + obj.id + '>' + obj.picture + '</>');
+            $('#content').append('<div id=' + obj.id + '>' + obj.price + '</>');
+            $('#content').append('<div id=' + obj.id + '>' + obj.selling_points + '</>');
+
+          }
+
+      }
+
+      // empty
+
+      add_to_page(book1);
+      add_to_page(book2);
+      add_to_page(album1);
+      add_to_page(album2);
+
+
+
+    </script>
+  </body>
+</html>

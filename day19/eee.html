@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+    var posts = [];
+
+    var post = {
+      url: 'http://jsonplaceholder.typicode.com/posts/',
+      $el: $('<div class="post">').appendTo($('body')),
+      // append랑 syntax가 반대이다. appendTo가 불러온 body에 $('<div class=post를 넣는다.')
+      initialize: function (id){
+        //initialize는 함수 값을 가지고 argument로 id를 받는다.
+        this.$el.attr('id', id) // post.#el id는 1
+        this.url += id // post.url + 1
+        var thisPost = this // var thisPost = post ... function 들어가기 전에 값을 저장하는 역할.
+        $.get(this.url, function(data){
+          //function 안의 argument인 data는 post.url의 주소에서 가져온 object를 의미한다.
+          //post.url   제이쿼리의 $.get Ajax 이 코드를 가져오라는 뜻.
+          console.log(this)   //console.log(post)
+          thisPost.attributes = data
+          // thisPost는 결국 Post이므로 post.attributes는 json url에서 가져온 object가 된다.
+          thisPost.render() //thisPost의 값이 post이므로 post.render를 호출한다.
+
+        })
+        posts.push(this) // posts는 empty array이므로 빈 배열에 post를 넣는다.
+      },
+      render: function (){
+        //render는 함수값을 가진다.
+        this.$el.append([ //post.$el에 배열의 제이쿼리 class를 더하여 text를 넣는다.
+          $('<div>').addClass('title').text(this.attributes.title),
+          //div에 클라스 title을 더하고 텍스트로 post.attributes.title을 넣는다.
+          $('<div>').addClass('body').text(this.attributes.body)
+          //div에 클라스 body를 더하고 텍스트로 post.attributes.body를 넣는다.
+        ])
+      }
+    }
+
+
+    var post_factory = function (id){
+/*
+      post.initialize(id)
+      post.render(id)*/
+
+      for(i = 75; i < 90; i++){
+        post.initialize(id)
+      }
+    }
+    post_factory(1)
+    post.highlight = function (){
+      this.active = true
+    }
+    post.highlight();
+    </script>
+  </body>
+</html>

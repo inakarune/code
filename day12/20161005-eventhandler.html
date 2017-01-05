@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EventListener</title>
+    <style>
+    .highlighted {
+      width: 300px;
+      height: 200px;
+      border: 1px solid green;
+    }
+    .woman {
+      width: 200px;
+      height: 200px;
+      border: 1px solid pink;
+      background-image: url('Margaret_Hamilton.gif');
+    }
+    body, html {
+      height: 100%;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="target"></div>
+    <div id="dollar"></div>
+    <div id="magic"></div>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+      var fn = function (){
+        console.log('heeey');
+      }
+      fn();
+
+      document.querySelector('#target').addEventListener('click', fn)
+      document.querySelector('#target').addEventListener('click', function(){
+        console.log('same deal')
+      })
+
+      function beeper (){
+        $('#target').append('<button> Button </button>')
+      }
+      beeper();
+      $('button').on('click', function(){
+        $('#target').append('<span> beeper </span><br />')
+      })
+
+      $('#target').on('click', function(){
+        $('#target').show().css('color', 'red').text('boomm goes the dynamite!')
+      })
+
+      function money(){
+        $('#dollar').append('<button>dollar</button>')
+      }
+      money();
+
+      $('button').on('click', function(){
+        $('#dollar').html('<img src="dollar.jpg" />')
+      })
+
+      $('#target').on('mouseover', function(){
+        $('#target').addClass('highlighted')
+      })
+      $('#target').on('mouseleave', function(){
+        $('#target').removeClass('highlighted')
+      })
+
+      $('#magic').on('mouseover', function(){
+        $('#magic').addClass('woman')
+      })
+
+      $('#magic').on('mouseleave', function(){
+        $('#magic').removeClass('woman')
+      })
+
+      var el_finder = function(event){
+        console.log('calling el_finder for:', event.target)
+        $(this).attr('id', 'active');
+      }
+      $('div').click(el_finder)
+
+      var mouse_tracker = function(event){
+        console.log(event.pageX, event.pageY, !!event.which)
+      }
+
+      $('body').on('mousemove', mouse_tracker);
+
+      $('input#type').on('keypress', function(event){
+        $('label').text(event.keyCode)
+      })
+
+      $('body').on('keyress', function(event){
+        String.fromCharCode(event.keyCode)
+      })
+
+    </script>
+  </body>
+</html>

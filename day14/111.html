@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <div id="object"></div>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+    var obj = {
+    greeting: 'howdy',
+    direction: 'down',
+    color: 'red',
+    'spaces-and-dashes can be used': ' but need to have quotes'
+    }
+
+
+    for (var key in obj){
+      if (key === 'color'){
+        $('#object').append(obj[key]);
+      }
+    }
+
+
+    for (var key in obj){
+      var value = obj[key]; //  5번에 3번 힌트
+      if (key === 'direction'){
+        $('#object').append(obj[key]);
+      }
+    }
+
+
+    var target_key = 'greeting';
+    obj[target_key] = 'sayonara'
+
+    for (var key in obj){
+      if(key === 'greeting'){
+        $('#object').append(obj[key])
+      }
+    }
+    */
+
+
+
+
+    </script>
+  </body>
+</html>

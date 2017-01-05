@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    <script>
+    var car = {
+      type: "Honda Civic",
+      position: 1,
+      move: function (){
+        var prev = this.position
+        this.position = this.position + 1
+        console.log(this.type + " is moving from " + prev + " to " + this.position)
+      }
+    }
+    car.move();
+    car.move();
+    car.move();
+    car.move();
+    car["speed"] = 10
+    car.move = function (){
+      var speed = this.speed
+      this.speed = this.speed + 1
+      console.log(this.type + " is moving from " + speed + " to " + this.speed)
+    }
+    car.move();
+    </script>
+  </body>
+</html>

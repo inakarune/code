@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <input type="text" name="content"></input>
+  <button type="button">Click me!</button>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+    var get_pictures = function (searchTerm){
+      $.ajax({
+        url: "https://api.imgur.com/3/gallery/search?q=" + encodeURI(searchTerm),
+        headers: { "Authorization": "Client-ID e3776adbe9c5fb9" },
+        success: function (response){
+          console.log(response)
+        }
+      })
+    }
+    $('button').click(function (){
+      var text = $('input').val();
+      get_pictures(text)
+
+    })
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,255 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+    var my_array = ['one', 'two', 'three']
+
+    my_array[0]
+    "one"
+    my_array[1]
+    "two"
+    my_array[2] = 'not three'
+    "not three"
+    my_array[2]
+    "not three"
+    var person = {
+    'name' : 'Mario',
+    'job' : 'Plumber'
+    }
+
+    person['name']
+    "Mario"
+    person['job']
+    "Plumber"
+    person['name'] = 'Luigi'
+
+    person['name'] = 'Luigi'
+    "Luigi"
+    person['name']
+    "Luigi"
+var my_cat = {};
+undefined
+my_cat.name = 'selly'
+"selly"
+my_cat.age = '10'
+"10"
+my_cat['age'] = '10'
+"10"
+my_cat.alive = true
+true
+my_cat.age = 10
+10
+my_cat.favorite_toy = 'mouse'
+"mouse"
+my_cat.napping_spot = 'bed'
+"bed"
+name : selly
+
+        var person = {
+        'name' : 'Mario',
+        'job' : 'Plumber',
+        'age' : 55,
+        'licenced' : true
+        }
+
+var person = {
+name: 'Mario',
+job: 'Plumber',
+age: 55,
+licenced: true
+}
+
+var human = {};
+
+human['nname'] = 'bob'
+"bob"
+human['name'] = 'bob'
+"bob"
+human['age'] = 75
+75
+human[property]
+VM1284:1 Uncaught ReferenceError: property is not defined(…)(anonymous function) @ VM1284:1
+property = 'location'
+"location"
+human[property] = 'san francisco'
+"san francisco"
+        var my_dream_life = {};
+
+        var property_key = 'job'
+
+my_dream_life[property_key]
+
+my_dream_life[property_key] = 'jjj'
+"jjj"
+my_dream_life
+Object {job: "jjj"}
+var another_property_key = 'salary'
+
+my_dream_life[another_property_key] = 100000000000
+
+my_dream_life
+Object {job: "jjj", salary: 100000000000}
+my_dream_life[property_key]
+"jjj"
+my_dream_life['job']
+"jjj"
+var next_property = 'car'
+undefined
+my_dream_life[next_property] = 'audi'
+"audi"
+my_dream_life[next_property]
+"audi"
+my_dream_life['car']
+"audi"
+var property_key = 'hobby'
+undefined
+my_dream_life[property_key] = 'reading'
+"reading"
+my_dream_life
+Object {job: "jjj", salary: 100000000000, car: "audi", hobby: "reading"}
+var property_key = 'color'
+undefined
+my_dream_life[property_key] = 'yellow'
+"yellow"
+my_dream_life
+Object {job: "jjj", salary: 100000000000, car: "audi", hobby: "reading", color: "yellow"}
+my_dream_life['car']= 'bmw'
+"bmw"
+var property_key = 'animal'
+undefined
+my_dream_life[property_key] = 'cat'
+"cat"
+my_dream_life
+Object {job: "jjj", salary: 100000000000, car: "bmw", hobby: "reading", color: "yellow"…}animal: "cat"car: "bmw"color: "yellow"hobby: "reading"job: "jjj"salary: 100000000000__proto__: Object
+var car = {
+make: 'Toyota'
+}
+
+car['model'] = 'Camry'
+"Camry"
+car.model = 'camry'
+"camry"
+car.model
+"camry"
+car.model = 'Prius'
+"Prius"
+car.model
+"Prius"
+var prop = 'year'
+
+car.year = 2016
+2016
+car
+Object {make: "Toyota", model: "Prius", year: 2016}
+car[prop]= 1992
+1992
+car.prop = 1992
+1992
+car.nothing_here
+
+var dream_car = {};
+
+dream_car.make = 'ssangyong'
+"ssangyong"
+dream_car.model = 'Tiboli'
+"Tiboli"
+dream_car.color = 'blue'
+"blue"
+dream_car.year = 2016
+2016
+dream_car.registered = true
+true
+dream_car
+Object {make: "ssangyong", model: "Tiboli", color: "blue", year: 2016, registered: true}
+var demo_object = {
+one: 1,
+two: 2,
+three: 3
+}
+
+
+undefined
+var one = 'three'
+undefined
+demo_object.two
+2
+demo_object.one
+1
+var state_capitals = {
+California: 'Sacramento',
+Texas: 'Austin'
+}
+undefined
+var place = 'California'
+undefined
+state_capitals['place']
+undefined
+demo_object[one]
+3
+state_capitals.place
+undefined
+state_capitals[place]
+"Sacramento"
+state_capitals['California']
+"Sacramento"
+state_capitals.california
+undefined
+state_capitals.California
+"Sacramento"
+state_capitals[California]
+VM3680:1 Uncaught ReferenceError: California is not defined(…)(anonymous function) @ VM3680:1
+var obj = {
+greeting: 'howdy',
+direction: 'down',
+color: 'red',
+'spaces-and-dashes can be used': 'but need to have quotes'
+}
+undefined
+for (var key in obj){
+console.log(obj[key])
+}
+VM3948:2 howdy
+VM3948:2 down
+VM3948:2 red
+VM3948:2 but need to have quotes
+undefined
+for (var key in cat){
+console.log(cat[key])
+}
+VM3998:1 Uncaught ReferenceError: cat is not defined(…)(anonymous function) @ VM3998:1
+for (var key in my_cat){
+console.log(my_cat[key])
+}
+VM4089:2 selly
+VM4089:2 10
+VM4089:2 true
+VM4089:2 mouse
+VM4089:2 bed
+undefined
+for (var key in dream_car){
+console.log(dream_car[key])
+}
+VM4186:2 ssangyong
+VM4186:2 Tiboli
+VM4186:2 blue
+VM4186:2 2016
+VM4186:2 true
+undefined
+for (var key in my_dream_life){
+console.log(my_dream_life[key])
+}
+VM4326:2 jjj
+VM4326:2 100000000000
+VM4326:2 bmw
+VM4326:2 reading
+VM4326:2 yellow
+VM4326:2 cat
+undefined
+
+
+    </script>
+  </body>
+</html>

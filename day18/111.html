@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    <script>
+
+    var person = {
+      name: 'selly',
+      location: 'bucheon',
+      hobbies: ['cook', 'reading', 'Quilt'],
+      cat: {
+        name: 'Navid',
+        hobbies: ['take a naping', 'crying']
+      },
+      party: function (){
+        console.log('Party Party!!');
+      }
+    }
+
+    person.work = function (){
+      console.log("맥도날드에 오신 것을 환영합니다, 저는 " + this.name + ". 주문하시겠습니까?");
+      console.log(this.location + "의 날씨는 참 좋지요?");
+      console.log(this.cat.name + "의 일상과 " + this.cat.hobbies[1] + "에 관한 이야기를 들어보시겠습니까?");
+    }
+    person.work();
+    person.workout = function (){
+      console.log("나의 취미는 " + this.hobbies[1] + '입니다.');
+    }
+    person.float_through_life_on_autopilot = function (){
+      this.work();
+      this.party();
+      this.workout();
+
+    }
+
+    person.float_through_life_on_autopilot();
+
+    </script>
+  </body>
+</html>

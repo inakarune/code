@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var multiplies_by = function (num){
+        return function (num1){
+          console.log(num * num1);
+        }
+      }
+
+      var times5 = multiplies_by(5);
+      times5(4);
+
+      var times10 = multiplies_by(10);
+      times10(32);
+
+
+    </script>
+  </body>
+</html>

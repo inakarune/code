@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="answer"></div>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+    /*
+    var say_hi = function () {
+        console.log('hi')
+      }
+
+      var greeter = say_hi
+
+      say_hi()
+      greeter()
+
+      say_hi = function () {
+        console.log('meh')
+      }
+
+      say_hi() // ??
+      greeter()
+
+      var runner = function (fn) {
+        console.log('Invoking a function now!')
+        fn()
+      }
+
+      runner( function(){ console.log('okay') } )
+      runner(say_hi)
+      runner(greeter)
+      runner( say_hi() ) */
+
+      var answer_logger = function (fn){
+        var appear = fn();
+        $('#answer').text(appear);
+      }
+
+      answer_logger(function(){
+        return 'I should appear in div#answer!'
+      })
+
+    </script>
+  </body>
+</html>

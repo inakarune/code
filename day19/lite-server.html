@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <input type="text" name="content"></input>
+    <button type="button">Click me!</button>
+
+    <div id="current-sound"></div>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script src="http://connect.soundcloud.com/sdk.js"></script>
+    <script>
+
+      // SoundCloud를 사용할 수 있도록 권한을 받습니다.
+      SC.initialize({ client_id: "d29ad0142b2cd0a47ad2e561334c8e0f" });
+      // "싸이"를 검색 후 나오는 album의 첫 번째 음악을 실행합니다.
+    /*  SC.get('/tracks', { q: '싸이' }, function(tracks){
+        SC.oEmbed(
+          tracks[0].uri,
+          { auto_play: true },
+          document.querySelector('#current-sound')
+        );
+      });
+
+      // 검색결과 음악들을 보여줍니다.
+      SC.get('/tracks', {q : '싸이' }, function(tracks){
+        tracks.forEach (function(track){
+          $('body').append($('<p></p>')
+                   .text(track.artwork_url + track.title + track.uri));
+        });
+      });*/
+
+      $('button').click( function (){
+        var text = $('input').val();
+        SC.get('/tracks', { q: text }, function(tracks){
+          SC.oEmbed(
+            tracks[0].uri,
+            { auto_play: true },
+            document.querySelector('#current-sound')
+
+
+          );
+        });
+        SC.get('/tracks', { q : text }, function(tracks){
+          tracks.forEach (function(track){
+            $('body').append($('<li>' + '</li>')
+                     .text(track.title + track.uri));
+          });
+        })
+      })
+
+    </script>
+  </body>
+</html>

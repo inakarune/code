@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+  var fn1 = function (){
+    return 'this should be the first value in results array.'
+  }
+  var answer_collector = function (fna){
+    var ret = [];
+
+    for(i = 0;i < fna.length; i++) {
+      ret.push( fna[i]() );
+    }
+
+    return ret;
+
+  }
+  var fn_ret = [];
+
+  fn_ret = answer_collector([
+    fn1,
+    function(){
+      return 'this should be the second value in results array'
+    }
+  ])
+
+console.log(fn_ret);
+
+    </script>
+  </body>
+</html>

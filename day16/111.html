@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="container"></div>
+    <a href="#">프랑스, 파리</a>
+
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+    /*
+    $.ajax({
+      method: 'GET',
+      url: 'http://api.openweathermap.org/data/2.5/weather?q=San%20Francisco&mode=json&units=imperial&APPID=50209915e0bb37dacb88e9ee4f70d10b',
+      success: function(weather_data){
+        console.log(weather_data);
+      }
+    })
+    */
+/*
+    var to_be_run_on_server_response = function(weather_data){
+
+      $('#container').html('현재 기온' + weather_data.main.temp + '<br>');
+      $('#container').append('오늘의 최대기온' + weather_data.main.temp_max + '<br>');
+      $('#container').append('오늘의 최저기온' + weather_data.main.temp_min + '<br>');
+      $('#container').append('현재 날씨정보' + weather_data.weather[0].description + '<br>');
+      $('#container').append('바람 속도' + weather_data.wind.speed + '<br>');
+      $('#container').append('해돋이' + new Date(weather_data.sys.sunrise * 1000) + '<br>');
+      $('#container').append('해몰이' + new Date(weather_data.sys.sunset + 1000));
+
+    }
+
+    $('a').click(function (event){
+      event.preventDefault();
+      $('#container').empty();
+      $('#container').append('요청하신 데이터를 서버에서 가지고 오는 중');
+      $.get('http://api.openweathermap.org/data/2.5/weather?q=San%20Francisco&mode=json&units=imperial&APPID=50209915e0bb37dacb88e9ee4f70d10b').success(to_be_run_on_server_response)
+
+    })*/
+
+    //블로그를 1부터 10까지 반복문으로 불러온다.
+
+    for (i = 1; i < 10; i++){
+      $.ajax({
+        method : "GET",
+        url : 'http://jsonplaceholder.typicode.com/posts/1' + i,
+        success: function (data){
+          console.log(data);
+          $('body').append(data.id + data.title + '<br>' + data.body);
+        }
+
+      })
+    }
+
+    </script>
+  </body>
+</html>
